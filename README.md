@@ -23,8 +23,12 @@ Usage of zabbix_sentry:
 ## Events
 Events will be thrown in following format:
 ```
-sentry.<org>.<project>.events.<status>
+sentry.events.[<org>,<project>,<status>]
 ```
+
+- `org` - is a slug of your organization
+- `project` - is a slug for your project
+- `status` can be on of: `received`, `rejected` or `blacklisted`
 
 ## Starting with docker
 ```bash

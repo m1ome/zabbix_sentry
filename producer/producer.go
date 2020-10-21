@@ -81,7 +81,7 @@ func (s Producer) ProjectStats(opts ProjectStatsQuery) (map[string]float64, erro
 			}
 
 			project := fmt.Sprintf(
-				"sentry.%s.%s.events.%s",
+				"sentry.events.[%s,%s,%s]",
 				*project.Organization.Slug,
 				*project.Slug,
 				statType,
